@@ -380,3 +380,14 @@ body {
 	border: 1px solid var(--ocean);
 	fill: var(--ocean);
 }
+.backdrop {
+}
+.is-hidden {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+.modal {
+}
+.close-btn {
+}
