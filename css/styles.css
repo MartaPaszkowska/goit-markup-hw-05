@@ -73,7 +73,6 @@ body {
 	transition-property: color;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
-	transition-delay: 0;
 }
 .contact {
 	gap: 40px;
@@ -89,7 +88,6 @@ body {
 	transition-property: color;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
-	transition-delay: 0;
 }
 .item-contact:hover,
 .item-contact:focus,
@@ -122,7 +120,6 @@ body {
 	transition-property: color, transform;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
-	transition-delay: 0;
 }
 .item-menu:hover,
 .item-menu:focus {
@@ -144,36 +141,26 @@ body {
 .item-row {
 	display: flex;
 	flex-direction: column;
-	transition-property: box-shadow;
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
-	transition-delay: 0;
 }
-
 .item-row:hover {
-	box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
-	box-shadow: 0px 1px 1px 0px rgba(46, 47, 66, 0.16);
-	box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+	box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+		0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+		0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 	cursor: pointer;
 }
 .overlay {
+	position: absolute;
+	background-color: var(--iris);
 	color: var(--cloud);
-	font-family: Roboto;
-	font-size: 16px;
-	line-height: 150%;
-	letter-spacing: 0.32px;
 	padding-top: 40px;
 	padding-left: 32px;
 	padding-right: 32px;
-	inset: 0;
-	background-color: var(--iris);
-	transform: translatey(100%);
-	transition: transform 250ms ease-in-out;
-	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 300px;
+	transform: translatey(100%);
+	transition: transform 250ms ease-in-out;
 }
 .item-row:hover .overlay {
 	transform: translatey(0);
@@ -261,10 +248,9 @@ body {
 	border: none;
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 	color: var(--cloud);
-	transition-property: background-color, box shodow, transform;
+	transition-property: transform;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
-	transition-delay: 0;
 }
 .button-hero:hover,
 .button-hero:focus {
@@ -368,7 +354,6 @@ body {
 	transition-property: background-color, transform;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
-	transition-delay: 0;
 }
 .background_sm_main:hover,
 .background_sm_main:focus {
@@ -388,7 +373,6 @@ body {
 	transition-property: background-color, transform;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
-	transition-delay: 0;
 }
 .background_sm_footer:hover,
 .background_sm_footer:focus {
@@ -431,7 +415,6 @@ body {
 	transition-property: border, fill, transform;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
-	transition-delay: 0;
 }
 .customers-icons-images:hover,
 .customers-icons-images:focus {
@@ -450,7 +433,6 @@ body {
 	transition-property: transform;
 	transition-duration: 500ms;
 	transition-timing-function: linear;
-	transition-delay: 0;
 }
 .is-hidden {
 	opacity: 0;
@@ -484,16 +466,6 @@ body {
 	background: linear-gradient(0deg, #e7e9fc, #e7e9fc),
 		linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
 	cursor: pointer;
-}
-.overlay {
-	position: absolute;
-	background-color: var(--iris);
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	transform: translatey(100%);
-	transition: transform 250ms ease-in-out;
 }
 .box {
 	position: relative;
