@@ -70,6 +70,9 @@ body {
 	color: var(--navyblue);
 	font-weight: 500;
 	text-decoration: none;
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(.17,.67,.83,.67);transition-delay: 0;
 }
 .contact {
 	gap: 40px;
@@ -82,6 +85,9 @@ body {
 	color: var(--slate);
 	font-size: 16px;
 	text-decoration: none;
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(.17,.67,.83,.67);transition-delay: 0;
 }
 .item-contact:hover,
 .item-contact:focus,
@@ -104,13 +110,16 @@ body {
 .item-menu {
 	font-family: "Roboto", sans-serif;
 	color: var(--iris);
-	background: var(--cloud);
+	background-color: var(--cloud);
 	font-weight: 500;
 	font-size: 16px;
 	border-radius: 4px;
 	padding: 12px 24px 12px 24px;
 	border: none;
 	text-align: center;
+	transition-property: color, transform;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(.17,.67,.83,.67);transition-delay: 0;
 }
 .item-menu:hover,
 .item-menu:focus {
@@ -120,6 +129,7 @@ body {
 	background-color: var(--ocean);
 	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
 		0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+	transform: scale(1.2);
 }
 .row {
 	display: flex;
@@ -131,13 +141,18 @@ body {
 .item-row {
 	display: flex;
 	flex-direction: column;
+	transition-property: transform, box-shadow;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(.17,.67,.83,.67);transition-delay: 0;
 }
 .item-row:hover {
 	cursor: pointer;
+	transform: translatey(0)
 	box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 	box-shadow: 0px 1px 1px 0px rgba(46, 47, 66, 0.16);
 	box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
+.overlay {}
 .last-row {
 	margin-bottom: 120px;
 }
@@ -217,16 +232,22 @@ body {
 	margin: 0 auto;
 	padding: 16px 32px;
 	border-radius: 4px;
-	background: var(--iris, #4d5ae5);
+	background-color: var(--iris);
 	border: none;
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 	color: var(--cloud);
+	transition-property: background-color,box shodow, transform;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(.17,.67,.83,.67);
+	transition-delay: 0;
+	
 }
 .button-hero:hover,
 .button-hero:focus {
 	background-color: var(--ocean);
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 	cursor: pointer;
+	transform: scale(1.2);
 }
 
 .bg-dark {
@@ -320,11 +341,16 @@ body {
 	border-radius: 50%;
 	width: 40px;
 	height: 40px;
+	transition-property: background-color, transform;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(.17,.67,.83,.67);
+	transition-delay: 0;
 }
 .background_sm_main:hover,
 .background_sm_main:focus {
 	cursor: pointer;
 	background-color: var(--ocean);
+	transform: scale(1.2);
 }
 .background_sm_footer {
 	display: flex;
@@ -335,11 +361,16 @@ body {
 	border-radius: 50%;
 	width: 40px;
 	height: 40px;
+	transition-property: background-color, transform;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(.17,.67,.83,.67);
+	transition-delay: 0;
 }
 .background_sm_footer:hover,
 .background_sm_footer:focus {
 	background-color: var(--green);
 	cursor: pointer;
+	transform: scale(1.2);
 }
 .social-list-icons-main {
 	display: flex;
@@ -373,30 +404,41 @@ body {
 	border-radius: 4px;
 	border: 1px solid var(--lightslate);
 	fill: var(--lightslate);
+	transition-property: border, fill, transform;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(.17,.67,.83,.67);
+	transition-delay: 0;
 }
 .customers-icons-images:hover,
 .customers-icons-images:focus {
 	cursor: pointer;
 	border: 1px solid var(--ocean);
 	fill: var(--ocean);
+	transform: scale(1.2);
 }
-.bg-modal {
+.backdrop {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	background-color: rgba(46, 47, 66, 0.4);
+	transition-property: transform;
+	transition-duration: 500ms;
+	transition-timing-function: linear;
+	transition-delay: 0;
 }
 .is-hidden {
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
-	transform: translateX(-50%) translateY(-50%) scale(0) rotate(0deg)
-		skew(40deg, 40deg);
+	transform: scale(1.25);
 }
 .modal {
 	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	width: 408px;
 	height: 584px;
 	border-radius: 4px;
@@ -418,4 +460,21 @@ body {
 	background: linear-gradient(0deg, #e7e9fc, #e7e9fc),
 		linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
 	cursor: pointer;
+}
+.overlay {
+	position: absolute;
+	background-color: var(--iris);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: translatey(100%);
+	transition: transform 250ms ease-in-out;
+}
+.box {
+	position: relative;
+  width: 360px;
+  height: 300px;
+  margin: 0 auto;
+  overflow: hidden;
 }
