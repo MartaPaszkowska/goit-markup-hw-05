@@ -42,11 +42,12 @@ body {
 }
 .top {
 	display: flex;
-	align-items: center;
-	padding: 24px 0px;
+	align-items: top;
+	padding: 24px 0px 0px 0px;
 }
 .logo {
 	margin-right: 76px;
+	padding-top: 0%;
 	display: inline-flex;
 	font-family: "Raleway", sans-serif;
 	font-size: 18px;
@@ -90,6 +91,7 @@ body {
 	border-radius: 2px;
 }
 .contact {
+	padding-top: 0%;
 	gap: 40px;
 	display: flex;
 	list-style: none;
